@@ -1,4 +1,3 @@
-
 const slides = document.querySelectorAll(".trade--easy--slide");
 const paginationItems = document.querySelectorAll(
   ".trade--easy--slider--pagination__list-item"
@@ -11,15 +10,12 @@ function showSlide(index) {
     slides[i].classList.remove("active", "first", "second");
     paginationItems[i].classList.remove("active");
   }
-
   slides[index].classList.add("active");
   const nextIndex = (index + 1) % slides.length;
   slides[nextIndex].classList.add("first");
   const nextNextIndex = (nextIndex + 1) % slides.length;
   slides[nextNextIndex].classList.add("second");
-
   paginationItems[index].classList.add("active");
-
   console.log(`Current Slide: ${index + 1}`);
 }
 
